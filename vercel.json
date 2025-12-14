@@ -15,41 +15,6 @@
   ],
   "redirects": [
     {
-      "source": "/patterns",
-      "destination": "/docs",
-      "permanent": false
-    },
-    {
-      "source": "/patterns/dnssec-pattern",
-      "destination": "/docs/patterns/dnssec-pattern",
-      "permanent": false
-    },
-    {
-      "source": "/patterns/evm-pattern",
-      "destination": "/docs/patterns/evm-pattern",
-      "permanent": false
-    },
-    {
-      "source": "/patterns/non-evm-pattern",
-      "destination": "/docs/patterns/non-evm-pattern",
-      "permanent": false
-    },
-    {
-      "source": "/patterns/webauthn-pattern",
-      "destination": "/docs/patterns/webauthn-pattern",
-      "permanent": false
-    },
-    {
-      "source": "/patterns/:match*",
-      "destination": "/docs/patterns/:match*",
-      "permanent": false
-    },
-    {
-      "source": "/specifications/:match*",
-      "destination": "/docs/specifications/:match*",
-      "permanent": false
-    },
-    {
       "source": "/index",
       "destination": "/docs",
       "permanent": false
