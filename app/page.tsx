@@ -27,7 +27,7 @@ export default function Page() {
             />
           </Link>
           <nav className="flex items-center gap-8" style={{ fontFamily: "var(--font-ibm)" }}>
-            <Link href="https://eurekaetcetera-3a349ac8.mintlify.dev/docs" className="text-sm uppercase text-muted-foreground transition-colors hover:text-foreground tracking-wide">
+            <Link href="/docs" className="text-sm uppercase text-muted-foreground transition-colors hover:text-foreground tracking-wide">
               Docs
             </Link>
             <Link href="https://github.com/eurekaetcetera" className="text-sm uppercase text-muted-foreground transition-colors hover:text-foreground tracking-wide">
