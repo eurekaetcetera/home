@@ -1,4 +1,3 @@
-import { compileMDX } from '@next/mdx'
 import fs from 'fs'
 import path from 'path'
 import { notFound } from 'next/navigation'
@@ -9,27 +8,18 @@ interface PageProps {
   }
 }
 
-export default async function DocsPage({ params }: PageProps) {
+export default function DocsPage({ params }: PageProps) {
   const { slug } = params
   const filePath = path.join(process.cwd(), 'docs', ...slug) + '.mdx'
 
   try {
     const fileContent = fs.readFileSync(filePath, 'utf8')
 
-    const { content } = await compileMDX({
-      source: fileContent,
-      options: {
-        parseFrontmatter: true,
-      },
-    })
-
     return (
-      <div className="min-h-screen bg-background text-foreground">
-        <div className="mx-auto max-w-screen-2xl px-8 py-16">
-          <div className="prose prose-lg max-w-none">
-            {content}
-          </div>
-        </div>
+      <div className="mx-auto max-w-screen-2xl px-8 py-16">
+        <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
+          <pre className="whitespace-pre-wrap font-mono text-sm leading-relaxed">{fileContent}</pre>
+        </article>
       </div>
     )
   } catch (error) {
@@ -38,7 +28,7 @@ export default async function DocsPage({ params }: PageProps) {
 }
 
 // Generate static params for all MDX files
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const docsDir = path.join(process.cwd(), 'docs')
 
   function getAllMdxFiles(dir: string, basePath: string = ''): string[] {
