@@ -5,8 +5,8 @@
       "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/docs"
     },
     {
-      "source": "/docs/(.*)",
-      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/docs/$1"
+      "source": "/docs/:match*",
+      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/docs/:match*"
     }
   ]
 }
