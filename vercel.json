@@ -12,5 +12,22 @@
       "source": "/mintlify-assets/:match*",
       "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/mintlify-assets/:match*"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/patterns/:match*",
+      "destination": "/docs/patterns/:match*",
+      "permanent": false
+    },
+    {
+      "source": "/specifications/:match*",
+      "destination": "/docs/specifications/:match*",
+      "permanent": false
+    },
+    {
+      "source": "/index",
+      "destination": "/docs",
+      "permanent": false
+    }
   ]
 }
