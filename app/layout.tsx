@@ -4,25 +4,35 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
-  icons: {
-    icon: [
+  title: "Eureka, Etcetera",
+  description: "Applied research and operations in proof verification, modular verifier design, and Ethereum-anchored trust models",
+  keywords: ["Ethereum", "ENS", "proof verification", "identity resolution", "blockchain", "trust models"],
+  authors: [{ name: "Eureka, Etcetera" }],
+  openGraph: {
+    title: "Eureka, Etcetera",
+    description: "Applied research and operations in proof verification, modular verifier design, and Ethereum-anchored trust models",
+    url: "https://www.eketc.co",
+    siteName: "Eureka, Etcetera",
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Eureka, Etcetera",
       },
     ],
-    apple: "/apple-icon.png",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eureka, Etcetera",
+    description: "Applied research and operations in proof verification, modular verifier design, and Ethereum-anchored trust models",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 }
 
