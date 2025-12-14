@@ -7,6 +7,10 @@
     {
       "source": "/docs/:match*",
       "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/:match*"
+    },
+    {
+      "source": "/mintlify-assets/:match*",
+      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/mintlify-assets/:match*"
     }
   ]
 }
