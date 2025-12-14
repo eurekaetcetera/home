@@ -1,8 +1,11 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ThemeToggle } from "@/components/theme-toggle"
+import Link from 'next/link'
+import Image from 'next/image'
 
-export default function Page() {
+export default function DocsLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
@@ -27,6 +30,9 @@ export default function Page() {
             />
           </Link>
           <nav className="flex items-center gap-8" style={{ fontFamily: "var(--font-ibm)" }}>
+            <Link href="/" className="text-sm uppercase text-muted-foreground transition-colors hover:text-foreground tracking-wide">
+              Home
+            </Link>
             <Link href="/docs" className="text-sm uppercase text-muted-foreground transition-colors hover:text-foreground tracking-wide">
               Docs
             </Link>
@@ -39,29 +45,13 @@ export default function Page() {
             <Link href="mailto:inbox@eketc.co" className="text-sm uppercase text-muted-foreground transition-colors hover:text-foreground tracking-wide">
               Message
             </Link>
-            <ThemeToggle />
           </nav>
         </div>
       </header>
 
-      {/* Main Content - Split Layout */}
-      <main className="mx-auto max-w-screen-2xl">
-        <div className="grid min-h-[calc(100vh-5rem)] grid-cols-1">
-          <div className="flex flex-col justify-center px-12 py-16 lg:px-20">
-            {/* Hero Text */}
-            <div className="mb-16">
-              <h1
-                className="mb-[18px] text-5xl font-light leading-tight tracking-tight text-foreground lg:text-6xl"
-                style={{ fontFamily: "var(--font-ibm)" }}
-              >
-                Applied research and operations in proof verification, modular verifier design, and Ethereum-anchored trust models
-              </h1>
-              <p className="text-lg leading-relaxed text-muted-foreground" style={{ fontFamily: "var(--font-ibm)" }}>
-                We build trustless resolution architectures and reference implementations for cross-namespace identity systems.
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Main Content */}
+      <main>
+        {children}
       </main>
     </div>
   )
