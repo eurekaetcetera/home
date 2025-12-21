@@ -2,15 +2,15 @@
   "rewrites": [
     {
       "source": "/docs",
-      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app"
+      "destination": "https://eurekaetcetera-3a349ac8.mintlify.dev/docs"
     },
     {
       "source": "/docs/:match*",
-      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/:match*"
+      "destination": "https://eurekaetcetera-3a349ac8.mintlify.dev/docs/:match*"
     },
     {
       "source": "/mintlify-assets/:match*",
-      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/mintlify-assets/:match*"
+      "destination": "https://eurekaetcetera-3a349ac8.mintlify.dev/mintlify-assets/:match*"
     }
   ],
   "redirects": [
