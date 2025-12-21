@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/docs",
-      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app"
+      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/docs"
     },
     {
       "source": "/docs/:match*",
-      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/:match*"
+      "destination": "https://eurekaetcetera-3a349ac8.mintlify.app/docs/:match*"
     },
     {
       "source": "/mintlify-assets/:match*",
